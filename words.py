@@ -45,7 +45,7 @@ def newword():
         x = random.randint(0, len(letters)-1)
 
         if letters[x].factor > y:        
-            new.append(letters[x].name)
+            new.append(letters[x].name)#RIGHT HERE MAYBE? FIX BLANK WORDS
 
     h = ""
     h = h.join(new)
@@ -219,6 +219,8 @@ def newsentence():
     global test
     global first
 
+    test = []
+
     first = True
 
     x = random.randint(0, 2)
@@ -250,8 +252,9 @@ def newparagraph():
 
     new = []
 
+    x = random.randint(25, 50)
 
-    for i in range(5, 7):
+    for i in range(1, x):
         newsentence()
         new.append(sentence)
         sentence = ""
@@ -263,11 +266,8 @@ def newtext():
     global dictionary
     global extra
 
-    for i in range(1, 500):
+    for i in range(1, 50):
         newword()
-
-        if extra in dictionary:
-            newword()
 
     text = ""
     
