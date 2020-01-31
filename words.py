@@ -266,7 +266,7 @@ def newtext():
     global dictionary
     global extra
 
-    for i in range(1, 50):
+    for i in range(1, 2525):
         newword()
 
     text = ""
@@ -274,7 +274,7 @@ def newtext():
     new = []
 
 
-    for i in range(0, 3):
+    for i in range(0, 5):
         newparagraph()
         new.append(paragraph)
         paragraph = ""
